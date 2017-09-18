@@ -1,0 +1,17 @@
+.bg-light {
+    background-color: #245688!important;
+    margin-bottom: 8px;
+}
+.navbar-light .navbar-brand {
+    color: rgb(226, 214, 214);
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(222, 198, 198, 0.9);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 251, 251, 0.5);
+}
+.nav-link{
+
+    padding: 5px ;
+}

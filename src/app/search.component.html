@@ -1,0 +1,53 @@
+<div class="container">
+     <div  id="searchtab" >
+        <div class="row" >
+          <div id="searchbar">
+            <div class="form-inline">
+                <select class="form-control" #city aria-placeholder="City" aria-dropeffect="fade">
+                    <option value=4>Bangalore</option>
+                    <option value=3>Mumbai</option>
+                    <option value=1>Delhi</option>
+                </select>                        
+                <button (click)="performSearch_cuisine(city)" class="btn btn-primary">fetch cuisine</button>                 
+                <div *ngIf="cuisines">
+                    <select class="form-control" #cuisine_id aria-placeholder="Cuisines">
+                        <option *ngFor="let cuisi of cuisines.cuisines" [value]="cuisi.cuisine.cuisine_id">
+                            {{cuisi.cuisine.cuisine_name}}</option>
+                    
+                    </select>
+                <button (click)="performSearch(cuisine_id,city)" class="btn btn-primary"> Search </button>
+                <br><br><br>
+            </div>
+        </div>
+             <div class="row search-content">
+              <ul *ngFor="let rest of restaurants"> <li>
+             <!--   <div class="container"> -->
+                  <div class="row well">
+                  
+                        
+                    
+                        <div class="col-sm-3">
+                        <a href="#">
+                      <img class="img-responsive lolu" src="{{rest.restaurant.thumb}}" alt="No Image Available">
+                    </a>
+                        </div>
+                       
+                        <div class="col-sm-9">
+                        
+                      <h2>{{rest.restaurant.name}} </h2>
+                          <p>{{rest.restaurant.location.locality}}<br>
+                        Cost for two: {{rest.restaurant.average_cost_for_two}} <br>
+                       <button class="btn btn-success"> Save </button> </p>
+                        
+                        
+                        
+                        </div>
+                  </div>
+               <!-- </div> -->
+              </li></ul>
+              </div>
+             
+           </div>
+        </div>
+      </div>
+      
