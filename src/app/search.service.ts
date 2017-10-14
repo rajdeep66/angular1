@@ -17,6 +17,8 @@ export class SearchService {
         this.http.get(apiLink, requestOpt)
         .subscribe((res: Response) => {
           this.restaurants = res.json().restaurants;
+          console.log("i am frm services ");
+          console.log(this.restaurants[1]);
         });
   }
   
